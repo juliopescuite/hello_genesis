@@ -1,0 +1,4 @@
+/build/main.gen
+/build/main.o
+/cfg/*
+/nvram/*
