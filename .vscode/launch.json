@@ -19,6 +19,18 @@
             ],
             "autoAttachChildProcess": true,
             "cwd": "${workspaceRoot}"
+        },
+        {
+            "name": "Debug Regen",
+            "type": "cppvsdbg",
+            "preLaunchTask": "vasmm68k_mot_build",
+            "program": "C:/Regen0972D/Regen.exe",
+            "request": "launch",
+            "args": [
+                "${workspaceRoot}/build/main.gen"
+            ],
+            "autoAttachChildProcess": true,
+            "cwd": "${workspaceRoot}"
         }
     ]
 }
