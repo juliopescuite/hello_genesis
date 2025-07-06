@@ -58,8 +58,4 @@ loop
 ignore_handler
   rte                                  ; return from exception (seems to restore PC)
 
-
-
-
-
 __end:
