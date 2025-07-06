@@ -26,9 +26,8 @@ To build and run this project, you need:
 hello-genesis/
 ├── src/
 │ └── main.asm # Main program file (Hello World code)
-├── build.sh # Bash build script
-├── hello.bin # Compiled ROM image
-└── README.md # Project documentation
+├── main.gen   # Compiled ROM image
+└── README.md  # Project documentation
 
 
 ## 🧱 How It Works

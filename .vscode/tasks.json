@@ -1,11 +1,12 @@
 {
 	// See https://go.microsoft.com/fwlink/?LinkId=733558
 	// for the documentation about the tasks.json format
+	"version": "2.0.0",
 	"tasks": [
 		{
 			"type": "process",
 			"label": "vasmm68k_mot_build",
-			"command": "C:/Users/julio/OneDrive/Documents/projects/sega_genesis/vasmm68k_mot_Win64/vasmm68k_mot.exe",
+			"command": "${config:sega_genesis_dev.vasm_dir}/vasmm68k_mot.exe",
 			"args": [
 				"-Fbin",
 				"src/main.asm",
@@ -16,7 +17,16 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"label": "cleanup_build",
+			"type": "shell",
+			"command": "Remove-Item -Path build -Recurse -Force;Remove-Item -Path cfg -Recurse -Force;Remove-Item -Path nvram -Recurse -Force",
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
 		}
-	],
-	"version": "2.0.0"
+	]
 }
