@@ -21,7 +21,7 @@
 		{
 			"label": "cleanup_build",
 			"type": "shell",
-			"command": "if (Test-Path cfg) { Remove-Item -Path cfg -Recurse -Force }; if (Test-Path nvram) { Remove-Item -Path nvram -Recurse -Force }",
+			"command": "if (Test-Path build) { Get-ChildItem -Path build | Remove-Item -Recurse -Force };if (Test-Path cfg) { Remove-Item -Path cfg -Recurse -Force }; if (Test-Path nvram) { Remove-Item -Path nvram -Recurse -Force }",
 			"args": [],
 			"options": {
 				"cwd": "${workspaceFolder}"
