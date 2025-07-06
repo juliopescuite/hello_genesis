@@ -21,7 +21,11 @@
 		{
 			"label": "cleanup_build",
 			"type": "shell",
-			"command": "Remove-Item -Path build -Recurse -Force;Remove-Item -Path cfg -Recurse -Force;Remove-Item -Path nvram -Recurse -Force",
+			"command": "if (Test-Path cfg) { Remove-Item -Path cfg -Recurse -Force }; if (Test-Path nvram) { Remove-Item -Path nvram -Recurse -Force }",
+			"args": [],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
 			"problemMatcher": [],
 			"presentation": {
 				"reveal": "always",
